@@ -95,14 +95,17 @@ public class LetterToYourself
         }
         System.out.println("|");
     }
-    // TODO: THIS DOEsNT WORK RIGHT FIX IT
+    // Method sets the spacing after the address
     public static void setSpaceAfterAddress(Integer numberForSpaceAfterAddress, Integer numberForTop) {
-        for (int j = 0; j < numberForSpaceAfterAddress; j++) {
+        for (int j = 0; j < 
+             
+             
+             ; j++) {
             System.out.print("|");
-            for (int i = 0; i > numberForTop; i++) {
+            for (int i = 0; i < numberForTop; i++) {
                 System.out.print(" ");
             }
-            System.out.print("|");
+            System.out.println("|");
         }
     }
 
@@ -112,7 +115,7 @@ public class LetterToYourself
         int numberForTop = 57;
         int numberForBottom = 57;
         int numberForSpaceAfterStamp = 57;
-        int numberForSpaceAfterAddress = 30;
+        int numberForSpaceAfterAddress = 5;
         int numberForStamp = 53;
         int stampHeight = 4;
         int addressLeftOffset = 25;
