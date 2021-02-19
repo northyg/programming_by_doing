@@ -45,14 +45,14 @@ class FortuneCookie {
     public static void main(String[] args) {
 
         int luckyNumberToRoll = 53;
-        int numberOfLottoToRoll = 6;
-        int numberToRoll = 6;
+        int numberOfLottoToRoll = 5;
+        int numberToRoll = 5;
         Random dice = new Random();
         int randomFortuneNumber = dice.nextInt(numberToRoll);
         randomFortune(randomFortuneNumber);
 
         // Roll the lottery numbers
-        for(int i = 0; i < 5; ++i){
+        for(int i = 0; i < numberOfLottoToRoll; ++i){
             int roll = luckyNumbers(luckyNumberToRoll);
             System.out.print(roll + " - ");
         }
