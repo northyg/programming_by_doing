@@ -26,6 +26,6 @@ public class AskingQuestions{
         weight = keyboard.nextDouble();
 
         System.out.println( "So you're " + age + " years old, " + feet + "'" + inches + "\"" + "tall and " + weight + " pounds heavy." );
- // WORK DAMN YOU
+ // WORK DAMN YOU !!
     }
 }
