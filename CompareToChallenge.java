@@ -15,21 +15,37 @@ If both the strings are equal then this method returns 0 else it returns positiv
 The result is positive if the first string is lexicographically greater than the second string else the result would be negative.
 https://beginnersbook.com/2013/12/java-string-compareto-method-example/
 
+NOTE: I tried making a method with compareTo() in it, but it was throwing a class Object error?
+Putting it back into main worked...
+
+CompareToChallenge.java:26: error: cannot find symbol
+                System.out.println(listA.get(i).compareTo(listB.get(i)));
+                                               ^
+  symbol:   method compareTo(Object)
+  location: class Object
 */
+
 import java.util.*;
 
 class CompareToChallenge {
-    
-    public static void main(String[] args) {
 
-        List<String> listA = Arrays.asList("Doggy", "Catly", "Apple", "Bravo", "Charlie", "Delta", "Echo", "Foxtroty", "Golfie", "Hotelss", "Indiana", "Juliety");
-        List<String> listB = Arrays.asList("Doggy", "Catly", "Appley", "Bravoest", "Charlies", "Deltas", "Echoswims", "Foxtrot", "Golf", "Hotel", "India", "Juliet");
+        public static void main (String[]args){
 
-        // compareTo looks to work, but unclear why it prints so many times...
-        for (String nameOne : listA) {
-            for (String nameTwo : listB){
-                System.out.println(nameOne.compareTo(nameTwo));
+            List<String> listA = Arrays.asList("Doggy", "Catly", "Apple", "Bravo", "Charlie", "Delta", "Echo", "Foxtroty", "Golfie", "Hotelss", "Indiana", "Juliety");
+            List<String> listB = Arrays.asList("Doggy", "Catly", "Appley", "Bravoest", "Charlies", "Deltas", "Echoswims", "Foxtrot", "Golf", "Hotel", "India", "Juliet");
+
+            int listASize = listA.size();
+            int listBSize = listB.size();
+
+            System.out.println("List sizes:\nListA: " + listASize + "\nListB: " + listBSize);
+
+            if (listASize == listBSize) {
+                for (int i = 0; i < listA.size(); ++i) {
+                    System.out.println(listA.get(i).compareTo(listB.get(i)));
+                }
+            }
+            else{
+                System.out.println("List sizes do not match! Check ye lists!");
             }
         }
     }
-}
