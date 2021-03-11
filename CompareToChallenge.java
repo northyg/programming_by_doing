@@ -14,4 +14,22 @@ Each character of both the strings is converted into a Unicode value for compari
 If both the strings are equal then this method returns 0 else it returns positive or negative value.
 The result is positive if the first string is lexicographically greater than the second string else the result would be negative.
 https://beginnersbook.com/2013/12/java-string-compareto-method-example/
+
 */
+import java.util.*;
+
+class CompareToChallenge {
+    
+    public static void main(String[] args) {
+
+        List<String> listA = Arrays.asList("Doggy", "Catly", "Apple", "Bravo", "Charlie", "Delta", "Echo", "Foxtroty", "Golfie", "Hotelss", "Indiana", "Juliety");
+        List<String> listB = Arrays.asList("Doggy", "Catly", "Appley", "Bravoest", "Charlies", "Deltas", "Echoswims", "Foxtrot", "Golf", "Hotel", "India", "Juliet");
+
+        // compareTo looks to work, but unclear why it prints so many times...
+        for (String nameOne : listA) {
+            for (String nameTwo : listB){
+                System.out.println(nameOne.compareTo(nameTwo));
+            }
+        }
+    }
+}
