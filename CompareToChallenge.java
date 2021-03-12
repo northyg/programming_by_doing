@@ -16,7 +16,7 @@ The result is positive if the first string is lexicographically greater than the
 https://beginnersbook.com/2013/12/java-string-compareto-method-example/
 
 NOTE: I tried making a method with compareTo() in it, but it was throwing a class Object error?
-Putting it back into main worked...
+Putting it back into main worked... Why?
 
 CompareToChallenge.java:26: error: cannot find symbol
                 System.out.println(listA.get(i).compareTo(listB.get(i)));
@@ -37,10 +37,9 @@ class CompareToChallenge {
             int listASize = listA.size();
             int listBSize = listB.size();
 
-            System.out.println("List sizes:\nListA: " + listASize + "\nListB: " + listBSize);
-
             if (listASize == listBSize) {
                 for (int i = 0; i < listA.size(); ++i) {
+                    System.out.print("Comparing " + listA.get(i) + " and " + listB.get(i) + " produces ");
                     System.out.println(listA.get(i).compareTo(listB.get(i)));
                 }
             }
