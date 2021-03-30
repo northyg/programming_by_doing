@@ -20,7 +20,7 @@ public class CountingMachineRevisited {
             }
         }
         else {
-            System.out.print("First number was not less than second number, try again!");
+            System.out.print("First number was greater than second number, try again!");
         }
     }
 
@@ -34,7 +34,7 @@ public class CountingMachineRevisited {
         System.out.print("Count from what number: ");
         firstNum = myScanner.nextInt();
 
-        System.out.print("Count to: ");
+        System.out.print("Count to a number that is greater than the first number: ");
         secondNum = myScanner.nextInt();
 
         System.out.print("Count by: ");
